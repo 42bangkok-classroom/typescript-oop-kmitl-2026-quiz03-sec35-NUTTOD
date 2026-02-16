@@ -1,1 +1,23 @@
-export class User {}
+export class User {
+    public username:string = ""
+    private password:string = ""
+    private static LOGIN_ATTEMPTS:number = 0
+
+    constructor(username: string, password:string){
+        this.username = username
+        this.password = password
+    }
+
+    public login(password: string):boolean {
+        User.LOGIN_ATTEMPTS++;
+        return this.validatePassword(password)
+    }
+
+    private validatePassword(password: string): boolean{
+        return this.password === password
+    }
+
+    public getLoginAttempts():number{
+        return User.LOGIN_ATTEMPTS;
+    }
+}
