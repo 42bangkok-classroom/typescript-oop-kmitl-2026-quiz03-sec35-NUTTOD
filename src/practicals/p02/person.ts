@@ -1,11 +1,11 @@
 export class Person {
     public firstname:string = ""
     public lastname:string = ""
-    private Age:number = 0
+    private age:number = 0
     public static readonly COUNTRY:string = "Thailand"
 
     public setAge(age:number):void{
-        this.Age = age
+        this.age = age
     }
 
     public getFullName(){
@@ -13,6 +13,6 @@ export class Person {
     }
 
     public getAge(){
-        return this.Age
+        return this.age
     }
 }
